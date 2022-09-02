@@ -9,14 +9,24 @@
     background-color: white;
     padding-top: 10px;
     padding-bottom: 10px;
+    box-shadow: 0 1px 100px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    left: 0;
+    top: 0;
+
 
     &__container{
         max-width: 1440px;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    &__container-wrap{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -25,6 +35,7 @@
     &__left-menu{
         display: flex;
         gap: 30px;
+        cursor: pointer;
     }
 
     &__logo-wrap{
@@ -43,19 +54,51 @@
     }
 
     &__left-menu-text{
+        border-bottom: 2px solid transparent;
         text-decoration: none;
         font-size: 14px;
         font-weight: normal;
-        color: #262626;;
+        color: #262626;
         
         &:hover{
-            text-decoration: underline 2px black;
+            border-bottom: 2px solid #262626;
         }
     }
-
+    
     &__right-menu{
         display: flex;
         align-items: center;
         gap: 20px;
+        cursor: pointer;
     }
+
+    &__link{
+        border-bottom: 2px solid transparent;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: normal;
+        color: #262626;
+        
+        &:hover{
+            border-bottom: 2px solid #262626;
+        }
+    }
+
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    &__right-profile{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.profile{
+    border: 1px solid #262626;
+    border-radius: 50%;
+    padding: 10px;
 }
